@@ -30,3 +30,7 @@ new_arr.each do |s|
 end
 puts "You have #{pair} pairs of socks"
 #end
+
+# .split returns an array from string input
+# .sort! arrange the array sorting the informations
+# .chunk_while returns an array of arrays with simmilar items
