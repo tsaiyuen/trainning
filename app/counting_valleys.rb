@@ -4,8 +4,8 @@
 # up or down represents a 1 unit change in altitude. We define the following
 # terms:
 # Function Description
-# Complete the counting_hills function in the editor below.
-# counting_hills has the following parameter(s):
+# Complete the countingValleys function in the editor below.
+# countingValleys has the following parameter(s):
 # int steps: the number of steps on the hike
 # string path: a string describing the path
 # Returns
@@ -31,15 +31,17 @@ end
 
 # -1 -1 1 1 -1 -1 1 -1 1 1 1 -1
 level = 0
-hill = 0
+valley = 0
+previous = 0
 path.each do |v|
+  previous = level
   level += v
-  if level < 0
-    hill += 1
+  if level < 0  && previous == 0
+    valley += 1
   end
 end
 
-puts hill
+puts "You walked through #{valley} valleys."
 
 
 
